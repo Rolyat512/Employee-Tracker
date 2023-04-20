@@ -59,9 +59,12 @@ class DB {
 
   addRole = ({ name }) =>
     this.db.promise().query("INSERT INTO department SET ?", { name });
+
+    addEmpç = ({ name }) =>
+        this.db.promise().query("INSERT INTO department SET ?", { name });
 }
 
 let db = new DB(connection);
 
 console.log(db.listDept());
-// module.exports = new DB(connection);
+module.exports = new DB(connection);
